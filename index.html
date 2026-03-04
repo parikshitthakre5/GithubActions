@@ -1,1 +1,79 @@
-<h1>Demo File</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags for responsiveness and character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>My Single Page Portfolio</title>
+    
+    <!-- Link to an external CSS file for styling (create a styles.css file in the same folder) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="nav__bar">
+        <ul>
+            <li><a href="#about" class="nav__links">About</a></li>
+            <li><a href="#projects" class="nav__links">Projects</a></li>
+            <li><a href="#contact" class="nav__links">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome/About Section -->
+    <section id="about" class="section__first">
+        <h1 class="section__h1">Hello, I am [Your Name]</h1>
+        <p class="section__p">A [Your Profession, e.g., Web Developer]</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section__projects">
+        <h2>My Work</h2>
+        <div class="projects__div">
+            <!-- Project Tile 1 -->
+            <a href="[Link to Project 1]" target="_blank" class="project-tile">
+                <!-- Replace with an actual image and alt text -->
+                <img src="[Image URL 1]" alt="Project 1 Image" class="projects__images">
+                <p class="projects__p">Project Name 1</p>
+            </a>
+            
+            <!-- Project Tile 2 -->
+            <a href="[Link to Project 2]" target="_blank" class="project-tile">
+                <!-- Replace with an actual image and alt text -->
+                <img src="[Image URL 2]" alt="Project 2 Image" class="projects__images">
+                <p class="projects__p">Project Name 2</p>
+            </a>
+            
+            <!-- You can add more project tiles here following the same structure -->
+        </div>
+        <div class="div__button">
+            <!-- Example link to a GitHub profile -->
+            <a href="[Link to your GitHub profile]" target="_blank">
+                <button class="projects__button">Show all projects</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section__contact">
+        <div class="contact__header">
+            <h2 class="contact__h2">Let's work together...</h2>
+            <p class="contact__p">How do you take your coffee?</p>
+        </div>
+        <div class="contact__links">
+            <!-- Replace with your actual contact links -->
+            <a href="https://linkedin.com[yourusername]" target="_blank">LinkedIn</a>
+            <a href="https://github.com[yourusername]" target="_blank">GitHub</a>
+            <a href="mailto:your.email@example.com">Send an email</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; [Current Year], [Your Name]</p>
+        <p>Created for <a href="https://freecodecamp.org/" target="_blank" class="footer__link">freeCodeCamp</a></p>
+    </footer>
+
+</body>
+</html>

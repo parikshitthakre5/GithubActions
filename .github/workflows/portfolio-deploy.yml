@@ -1,0 +1,39 @@
+name: Portfolio Deploy
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+jobs:
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }} 
+        runs-on: ubuntu-latest
+
+        steps:
+            #Get access to your portfolio code via pre-built GitHub Actions
+            #Step -1 = Check outs current repo code only
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            #Set up GitHub Pages using the configure-pages action
+            #Step -2 = Set up GitHub Pages using the configure-pages action
+            - name: Set up GitHub Pages
+              uses: actions/configure-pages@v4
+             
+            #Static Code artifacts
+            #Step -3 = Upload static files using the upload-pages-artifact action
+            - name: Upload static files 
+              uses: actions/upload-pages-artifact@v4
+
+            #Make Page Live
+            #Step -4 = Deploy to GitHub Pages using the deploy-pages action
+            - name: Deploy to GitHub Pages
+              uses: actions/deploy-pages@v4
