@@ -35,7 +35,7 @@ jobs:
         run: echo "Testing the container"
 
   Deploy:
-    if: ${{ github.event.inputs.environment == 'dev' }}
+    if: inputs.environment == 'dev' 
     needs: [Test]
     runs-on: ubuntu-latest
     steps:
